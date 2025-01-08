@@ -1,0 +1,163 @@
+@font-face {
+    font-family: "Norse";
+    src: url("../fonts/Norse.otf") format("opentype");
+}
+
+/* CSS Variables for easy theme management */
+:root {
+    --primary-color: #b85e3a;
+    --secondary-color: #7E0F07;
+    --accent-color: #333;
+    --text-color: #fff;
+    --font-family: "Norse", sans-serif;
+    --font-family-alt: "Caesar Dressing", serif;
+}
+
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, var(--primary-color), var(--secondary-color));
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: var(--text-color);
+}
+
+header,
+main,
+footer {
+    width: 100%;
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 3em;
+    font-family: var(--font-family-alt);
+}
+
+footer {
+    text-align: center;
+    background-color: var(--accent-color);
+    padding: 10px 0;
+    flex-shrink: 0;
+}
+
+.input-container {
+    position: relative;
+    margin: 5px auto;
+    width: 300px;
+}
+
+.input-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+}
+
+input,
+select {
+    padding: 10px 10px 10px 40px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+input:hover,
+select:hover {
+    border-color: var(--accent-color);
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    cursor: pointer;
+    font-family: var(--font-family);
+    width: auto;
+}
+
+button:hover {
+    background-color: var(--primary-color);
+    transition: 0.3s;
+}
+
+form {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+label {
+    font-family: var(--font-family);
+}
+
+a:link,
+a:visited {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+    transition: 0.3s;
+}
+
+a:active {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+option {
+    padding: 10px 10px 10px 40px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+option:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+@media (max-width: 600px) {
+    .input-container {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+}

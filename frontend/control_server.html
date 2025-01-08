@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servidor Valheim</title>
+    <link rel="icon" href="./imgs/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caesar+Dressing&display=swap" rel="stylesheet">
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.283.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/amazon-cognito-identity-js@4.5.10/dist/amazon-cognito-identity.min.js"></script>
+    <script src="./js/control_server.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Servidor Valheim</h1>
+    </header>
+    <main>
+        <form id="loginForm">
+            <div class="input-container">
+                <img src="./imgs/username.png" class="input-icon" alt="User Icon">
+                <input type="text" id="username" name="username" placeholder="Nome de usuário" required aria-label="Nome de usuário">
+            </div>
+            <div class="input-container">
+                <img src="./imgs/password.png" class="input-icon" alt="Password Icon">
+                <input type="password" id="password" name="password" placeholder="Senha" required aria-label="Senha">
+            </div>
+            <button type="submit">Login</button>
+        </form>
+        <form id="newPasswordForm" style="display:none;">
+            <div class="input-container">
+                <img src="./imgs/password.png" class="input-icon" alt="Password Icon">
+                <input type="password" id="newPassword" name="newPassword" placeholder="Nova Senha" required aria-label="Nova Senha">
+            </div>
+            <button type="submit">Definir Nova Senha</button>
+        </form>
+        <form id="controlForm" style="display:none;">
+            <p id="currentStatus"></p>
+            <label for="action">Ação:</label>
+            <select id="action" name="action" aria-label="Ação">
+                <option value="start">Ligar</option>
+                <option value="stop">Desligar</option>
+            </select>
+            <button type="submit">Enviar</button>
+        </form>
+        <div id="result" style="display:none;">
+            <p id="message"></p>
+            <p id="accessDetails"></p>
+            <p id="serverPassword"></p>
+        </div>
+    </main>
+    <footer>
+        <p class="footer-info">Desenvolvido por <a href="https://github.com/juanPablo06">Juan Pablo</a></p>
+        <p class="footer-info">Projeto disponível no <a href="https://github.com/juanPablo06/valheim-personal-server">GitHub</a></p>
+        <img class="aws-certification-badges" src="./imgs/aws-certified-sysops-administrator-associate.png" alt="AWS Certified SysOps Administrator Associate">
+        <img class="aws-certification-badges" src="./imgs/aws-certified-solutions-architect-associate.png" alt="AWS Certified Solutions Architect Associate">
+    </footer>
+</body>
+</html>
