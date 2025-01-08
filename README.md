@@ -12,6 +12,10 @@ This project sets up a personal Valheim server using Terraform, AWS, and Docker.
 - `terraform/`: Contains Terraform configuration files for setting up the AWS infrastructure.
 - `terraform/scripts/`: Contains scripts for server setup and management.
 
+## Diagram
+
+![alt text](valheim-server-diagram.jpg)
+
 ## Prerequisites
 
 - Terraform
